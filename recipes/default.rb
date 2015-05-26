@@ -7,12 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-user node[:etcd][:user]
-
-group node[:etcd][:user] do
-  members node[:etcd][:user]
-end
-
 include_recipe 'etcd::install'
 
 include_recipe 'etcd::config'

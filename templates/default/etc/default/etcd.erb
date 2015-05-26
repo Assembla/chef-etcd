@@ -3,88 +3,88 @@
 ### All manual edits will be overwritten during next Chef run ###
 
 <% etcd = node.etcd %>
-ETCD_NAME=<%= etcd.name %>
-ETCD_DATA_DIR=<%= etcd.data_dir %>
-ETCD_SNAPSHOT_COUNT=<%= etcd.snapshot_count %>
-ETCD_HEARTBEAT_INTERVAL=<%= etcd.heartbeat_interval %>
-ETCD_ELECTION_TIMEOUT=<%= etcd.election_timeout %>
-ETCD_MAX_SNAPSHOTS=<%= etcd.max_snapshots %>
-ETCD_MAX_WALS=<%= etcd.max_wals %>
+export ETCD_NAME=<%= etcd.name %>
+export ETCD_DATA_DIR=<%= etcd.data_dir %>
+export ETCD_SNAPSHOT_COUNT=<%= etcd.snapshot_count %>
+export ETCD_HEARTBEAT_INTERVAL=<%= etcd.heartbeat_interval %>
+export ETCD_ELECTION_TIMEOUT=<%= etcd.election_timeout %>
+export ETCD_MAX_SNAPSHOTS=<%= etcd.max_snapshots %>
+export ETCD_MAX_WALS=<%= etcd.max_wals %>
 
 
 <% unless etcd.cors.empty? %>
-ETCD_CORS=<%= etcd.cors %>
+export ETCD_CORS=<%= etcd.cors %>
 <% end %>
 <% unless etcd.listen_peer_urls.empty? %>
-ETCD_LISTEN_PEER_URLS=<%= etcd.listen_peer_urls %>
+export ETCD_LISTEN_PEER_URLS=<%= etcd.listen_peer_urls %>
 <% end %>
 <% unless etcd.listen_client_urls.empty? %>
-ETCD_LISTEN_CLIENT_URLS=<%= etcd.listen_client_urls %>
+export ETCD_LISTEN_CLIENT_URLS=<%= etcd.listen_client_urls %>
 <% end %>
 <% unless etcd.initial_advertise_peer_urls.empty? %>
-ETCD_INITIAL_ADVERTISE_PEER_URLS=<%= etcd.initial_advertise_peer_urls %>
+export ETCD_INITIAL_ADVERTISE_PEER_URLS=<%= etcd.initial_advertise_peer_urls %>
 <% end %>
 <% unless etcd.initial_cluster.empty? %>
-ETCD_INITIAL_CLUSTER=<%= etcd.initial_cluster %>
+export ETCD_INITIAL_CLUSTER=<%= etcd.initial_cluster %>
 <% end %>
 
-ETCD_INITIAL_CLUSTER_STATE=<%= etcd.initial_cluster_state %>
-ETCD_INITIAL_CLUSTER_TOKEN=<%= etcd.initial_cluster_token %>
+export ETCD_INITIAL_CLUSTER_STATE=<%= etcd.initial_cluster_state %>
+export ETCD_INITIAL_CLUSTER_TOKEN=<%= etcd.initial_cluster_token %>
 
 <% unless etcd.advertise_client_urls.empty? %>
-ETCD_ADVERTISE_CLIENT_URLS=<%= etcd.advertise_client_urls %>
+export ETCD_ADVERTISE_CLIENT_URLS=<%= etcd.advertise_client_urls %>
 <% end %>
 <% unless etcd.discovery.empty? %>
-ETCD_DISCOVERY=<%= etcd.discovery %>
+export ETCD_DISCOVERY=<%= etcd.discovery %>
 <% end %>
 <% unless etcd.discovery_srv.empty? %>
-ETCD_DISCOVERY_SRV=<%= etcd.discovery_srv %>
+export ETCD_DISCOVERY_SRV=<%= etcd.discovery_srv %>
 <% end %>
 
-ETCD_DISCOVERY_FALLBACK=<%= etcd.discovery_fallback %>
+export ETCD_DISCOVERY_FALLBACK=<%= etcd.discovery_fallback %>
 
 <% unless etcd.discovery_proxy.empty? %>
-ETCD_DISCOVERY_PROXY=<%= etcd.discovery_proxy %>
+export ETCD_DISCOVERY_PROXY=<%= etcd.discovery_proxy %>
 <% end %>
 
-ETCD_PROXY=<%= etcd.proxy %>
+export ETCD_PROXY=<%= etcd.proxy %>
 
 <% unless etcd.ca_file.empty? %>
-ETCD_CA_FILE=<%= etcd.ca_file %>
+export ETCD_CA_FILE=<%= etcd.ca_file %>
 <% end %>
 <% unless etcd.cert_file.empty? %>
-ETCD_CERT_FILE=<%= etcd.cert_file %>
+export ETCD_CERT_FILE=<%= etcd.cert_file %>
 <% end %>
 <% unless etcd.key_file.empty? %>
-ETCD_KEY_FILE=<%= etcd.key_file %>
+export ETCD_KEY_FILE=<%= etcd.key_file %>
 <% end %>
 
-ETCD_CLIENT_CERT_AUTH=<%= etcd.client_cert_auth %>
+export ETCD_CLIENT_CERT_AUTH=<%= etcd.client_cert_auth %>
 
 <% unless etcd.trusted_ca_file.empty? %>
-ETCD_TRUSTED_CA_FILE=<%= etcd.trusted_ca_file %>
+export ETCD_TRUSTED_CA_FILE=<%= etcd.trusted_ca_file %>
 <% end %>
 <% unless etcd.peer_ca_file.empty? %>
-ETCD_PEER_CA_FILE=<%= etcd.peer_ca_file %>
+export ETCD_PEER_CA_FILE=<%= etcd.peer_ca_file %>
 <% end %>
 <% unless etcd.peer_cert_file.empty? %>
-ETCD_PEER_CERT_FILE=<%= etcd.peer_cert_file %>
+export ETCD_PEER_CERT_FILE=<%= etcd.peer_cert_file %>
 <% end %>
 <% unless etcd.peer_key_file.empty? %>
-ETCD_PEER_KEY_FILE=<%= etcd.peer_key_file %>
+export ETCD_PEER_KEY_FILE=<%= etcd.peer_key_file %>
 <% end %>
 
-ETCD_PEER_CLIENT_CERT_AUTH=<%= etcd.peer_client_cert_auth %>
+export ETCD_PEER_CLIENT_CERT_AUTH=<%= etcd.peer_client_cert_auth %>
 
 <% unless etcd.peer_trusted_ca_file.empty? %>
-ETCD_PEER_TRUSTED_CA_FILE=<%= etcd.peer_trusted_ca_file %>
+export ETCD_PEER_TRUSTED_CA_FILE=<%= etcd.peer_trusted_ca_file %>
 <% end %>
 
-ETCD_DEBUG=<%= etcd.debug %>
+export ETCD_DEBUG=<%= etcd.debug %>
 
 
 <% unless etcd.log_package_levels.empty? %>
-ETCD_LOG_PACKAGE_LEVELS=<%= etcd.log_package_levels %>
+export ETCD_LOG_PACKAGE_LEVELS=<%= etcd.log_package_levels %>
 <% end %>
 
-ETCD_FORCE_NEW_CLUSTER=<%= etcd.force_new_cluster %>
+export ETCD_FORCE_NEW_CLUSTER=<%= etcd.force_new_cluster %>
