@@ -1,4 +1,8 @@
 default['etcd']['data_dir'] = '/var/lib/etcd'
+default['etcd']['log_dir'] = '/var/log/etcd'
+
+default['etcd']['user'] = 'etcd'
+default['etcd']['group'] = 'etcd'
 
 default['etcd']['name'] = node.hostname
 
